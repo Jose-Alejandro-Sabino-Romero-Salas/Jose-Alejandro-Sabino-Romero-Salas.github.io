@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta name="google-site-verification" content="MBLV_3o7vZLcyIBGeKEHqFDiigUty2U5iGJfeyVGnl0" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Alejandro Sabino Romero Salas</title>
+    <title>José Alejandro - Página Personal</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,19 +14,22 @@
             color: #333;
         }
         header {
-            background: #333;
-            color: #fff;
-            padding: 10px 20px;
+            background: #1a1a1a;
+            color: white;
+            padding: 20px;
             text-align: center;
         }
+        header h1 {
+            margin: 0;
+        }
         nav {
-            background: #555;
-            color: #fff;
+            background: #333;
+            color: white;
             padding: 10px;
             text-align: center;
         }
         nav a {
-            color: #fff;
+            color: white;
             text-decoration: none;
             margin: 0 15px;
         }
@@ -37,58 +39,93 @@
         main {
             padding: 20px;
         }
+        section {
+            margin-bottom: 20px;
+        }
+        .powerlifting {
+            background: #f4f4f4;
+            border: 2px solid #333;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .powerlifting h2 {
+            margin-top: 0;
+        }
         footer {
             text-align: center;
-            background: #333;
-            color: #fff;
+            background: #1a1a1a;
+            color: white;
             padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        }
+        .social-links, .playlist-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .social-links a, .playlist-links a {
+            color: white;
+            background: #333;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .social-links a:hover, .playlist-links a:hover {
+            background: #555;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>ABOUT ME</h1>
+        <h1>José Alejandro Sabino Romero Salas</h1>
+        <p>Estudiante de Ciencia de la Computación y powerlifter en formación</p>
     </header>
     <nav>
-        <a href="#about">Proyectos</a>
-        <a href="#services">Servicios</a>
+        <a href="#about">Acerca de mí</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#powerlifting">Powerlifting</a>
         <a href="#contact">Contacto</a>
-        <a href="#cursos">Cursos</a>
-        <a href="#universidad">Universidad</a>
     </nav>
     <main>
         <section id="about">
-            <h2>Acerca de</h2>
-            <p>Esta es mi pagina web con informacion sobre mi</p>
+            <h2>Acerca de mí</h2>
+            <p>Tengo 18 años y estudio Ciencia de la Computación en la Universidad Católica San Pablo. También entreno para powerlifting y manejo pequeños emprendimientos individuales.</p>
         </section>
-        <section id="services">
-            <h2>Servicios</h2>
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <p>Me gustan los videojuegos, escuchar música, caminar, ver paisajes y entrenar para powerlifting.</p>
+            <h3>Gustos musicales</h3>
+            <p>Disfruto el rock, britpop y rock en español. Bandas favoritas: Oasis, Pulp, The Alan Parsons Project, y más.</p>
+        </section>
+        <section id="projects">
+            <h2>Proyectos</h2>
             <ul>
-                <li>Desarrollo web</li>
-                <li>Diseño gráfico</li>
-                <li>Consultoría tecnológica</li>
+                <li>Juego desarrollado junto a Jhon Vizcarra como parte del curso de Programación de Videojuegos.</li>
+                <li>Base de datos para el gimnasio Cultural Gym (<a href="https://www.instagram.com/culturalgym/?hl=es" target="_blank">Cultural Gym Instagram</a>).</li>
             </ul>
+        </section>
+        <section id="powerlifting" class="powerlifting">
+            <h2>Powerlifting</h2>
+            <p>Estoy en formación como powerlifter, combinando fuerza, disciplina y técnica para mejorar mis marcas personales.</p>
+            <p>Me apasiona el levantamiento de pesas y lo considero una de las áreas más gratificantes de mi vida.</p>
         </section>
         <section id="contact">
             <h2>Contacto</h2>
-            <p>Correo: jose.romero.salas@ucsp.edu.pe</p>
-            <p>Teléfono: 953449934</p>
-        </section>
-        <section id="cursos">
-            <h2>Currsos</h2>
-            <p>Matematica II</p>
-            <p>Tfilosofia</p>
-        </section>
-        <section id="universidad">
-            <h2>universidad</h2>
-            <p>SAN PABLO</p>
+            <div class="social-links">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">GitHub</a>
+            </div>
+            <h3>Playlists</h3>
+            <div class="playlist-links">
+                <a href="#" target="_blank">Playlist 1</a>
+                <a href="#" target="_blank">Playlist 2</a>
+            </div>
         </section>
     </main>
     <footer>
-        <p>© 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        <p>© 2024 José Alejandro. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
