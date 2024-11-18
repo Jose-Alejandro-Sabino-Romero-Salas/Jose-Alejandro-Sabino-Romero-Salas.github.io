@@ -1,281 +1,168 @@
 <!DOCTYPE html>
-<!-- [El código del head y los estilos anteriores se mantienen igual hasta la sección de Music Section donde agregamos:] -->
-<style>
-    /* ... [Estilos anteriores] ... */
-
-    /* Music Section Actualizada */
-    .music-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 20px;
-        margin-bottom: 40px;
-    }
-
-    .music-card {
-        background: var(--light-bg);
-        padding: 15px;
-        border-radius: 10px;
-        text-align: center;
-        transition: transform 0.3s ease;
-    }
-
-    .music-card:hover {
-        transform: translateY(-5px);
-        background: rgba(231, 76, 60, 0.1);
-    }
-
-    .music-card img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        margin-bottom: 15px;
-    }
-
-    /* Powerlifting Section Actualizada */
-    .powerlifting-stats {
-        background: rgba(231, 76, 60, 0.1);
-        border-radius: 15px;
-        padding: 30px;
-        margin-top: 40px;
-    }
-
-    .lift-comparison {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        margin: 30px 0;
-    }
-
-    .lift-card {
-        background: var(--light-bg);
-        border-radius: 10px;
-        padding: 25px;
-    }
-
-    .lift-title {
-        color: var(--accent-color);
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-    }
-
-    .lift-detail {
-        margin: 10px 0;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .progress-bar {
-        width: 100%;
-        height: 8px;
-        background: rgba(255,255,255,0.1);
-        border-radius: 4px;
-        margin: 15px 0;
-        position: relative;
-    }
-
-    .progress-bar::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        background: var(--accent-color);
-        border-radius: 4px;
-        width: var(--progress);
-    }
-
-    .goal-section {
-        text-align: center;
-        margin: 40px 0;
-        padding: 30px;
-        background: rgba(255,255,255,0.05);
-        border-radius: 15px;
-    }
-
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        margin: 40px 0;
-    }
-
-    .gallery-item {
-        position: relative;
-        height: 300px;
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-    }
-
-    .gallery-item:hover img {
-        transform: scale(1.05);
-    }
-    
-    /* ... [Resto de estilos anteriores] ... */
-</style>
-
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Alejandro - Página Personal</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .powerlifting {
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            background: #1e3c72;
+            color: white;
+            padding: 15px 0;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        .social-links, .playlist-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .social-links a, .playlist-links a {
+            color: white;
+            background: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .social-links a:hover, .playlist-links a:hover {
+            background: #555;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            nav a {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
 <body>
-    <!-- [Header y Hero section se mantienen igual] -->
-
-    <!-- [Secciones anteriores hasta Powerlifting] -->
-
-    <section class="powerlifting-section" id="powerlifting">
-        <h2 class="section-title">Mi Camino en el Powerlifting</h2>
-        
-        <div class="powerlifting-stats">
-            <p class="text-center">Preparándome para el Campeonato Regional 2025</p>
-            
-            <div class="lift-comparison">
-                <div class="lift-card">
-                    <h3 class="lift-title">Squat</h3>
-                    <div class="lift-detail">
-                        <span>PR Actual (Low Bar)</span>
-                        <span>120kg x 5 @8</span>
-                    </div>
-                    <div class="lift-detail">
-                        <span>Variante (High Bar)</span>
-                        <span>100kg x 3 @6</span>
-                    </div>
-                    <div class="progress-bar" style="--progress: 77%"></div>
-                    <div class="lift-detail">
-                        <span>Objetivo Abril 2025</span>
-                        <span>155kg</span>
-                    </div>
-                </div>
-
-                <div class="lift-card">
-                    <h3 class="lift-title">Bench Press</h3>
-                    <div class="lift-detail">
-                        <span>PR Actual</span>
-                        <span>105kg x 2 @9</span>
-                    </div>
-                    <div class="lift-detail">
-                        <span>Variante (Larsen)</span>
-                        <span>90kg x 3</span>
-                    </div>
-                    <div class="progress-bar" style="--progress: 81%"></div>
-                    <div class="lift-detail">
-                        <span>Objetivo Abril 2025</span>
-                        <span>130kg</span>
-                    </div>
-                </div>
-
-                <div class="lift-card">
-                    <h3 class="lift-title">Deadlift</h3>
-                    <div class="lift-detail">
-                        <span>PR Actual</span>
-                        <span>160kg x 1 @10</span>
-                    </div>
-                    <div class="lift-detail">
-                        <span>Variante (Deficit)</span>
-                        <span>130kg x 3</span>
-                    </div>
-                    <div class="progress-bar" style="--progress: 80%"></div>
-                    <div class="lift-detail">
-                        <span>Objetivo Abril 2025</span>
-                        <span>200kg</span>
-                    </div>
-                </div>
+    <header>
+        <h1>José Alejandro Sabino Romero Salas</h1>
+        <p>Estudiante, powerlifter y desarrollador en formación</p>
+    </header>
+    <nav>
+        <a href="#about">Sobre mí</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#powerlifting">Powerlifting</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+    <main>
+        <section id="about">
+            <h2>Sobre mí</h2>
+            <p>Mi nombre es José Alejandro, estudiante de Ciencia de la Computación en la Universidad Católica San Pablo. Además, entreno para powerlifting y disfruto desarrollando proyectos creativos.</p>
+        </section>
+        <section id="hobbies">
+            <h2>Hobbies y Gustos</h2>
+            <p>Disfruto de los videojuegos, caminar, admirar paisajes y, por supuesto, escuchar música. Mis géneros favoritos incluyen rock y britpop, con artistas como Oasis, Pulp, The Smiths, The Cranberries, y muchos más.</p>
+        </section>
+        <section id="projects">
+            <h2>Proyectos</h2>
+            <ul>
+                <li>Desarrollo de un juego junto a Jhon Vizcarra como proyecto final de Programación de Videojuegos.</li>
+                <li>Creación de una base de datos para el gimnasio <a href="https://www.instagram.com/culturalgym/?hl=es" target="_blank">Cultural Gym</a>.</li>
+            </ul>
+        </section>
+        <section id="powerlifting" class="powerlifting">
+            <h2>Mi Trayectoria en Powerlifting</h2>
+            <p>Comencé a entrenar powerlifting seriamente hace un mes. Actualmente, estoy preparando mis marcas para el campeonato regional de abril.</p>
+            <p><strong>Marcas actuales:</strong></p>
+            <ul>
+                <li>Squat: 120 kg x 5 @8</li>
+                <li>Bench Press: 105 kg x 2 @9</li>
+                <li>Deadlift: 160 kg x 1 @10</li>
+            </ul>
+            <p><strong>Objetivos para abril:</strong></p>
+            <ul>
+                <li>Squat: 155 kg</li>
+                <li>Bench Press: 130 kg</li>
+                <li>Deadlift: 200 kg</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contacto</h2>
+            <div class="social-links">
+                <a href="#" target="_blank">Instagram</a>
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">GitHub</a>
             </div>
-        </div>
-
-        <div class="goal-section">
-            <h3>Objetivos para el Campeonato Regional 2025</h3>
-            <p>En camino a alcanzar un total de 485kg en plataforma</p>
-        </div>
-
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="/api/placeholder/400/300" alt="Powerlifting Training 1">
+            <h3>Playlists</h3>
+            <div class="playlist-links">
+                <a href="#" target="_blank">Playlist 1</a>
+                <a href="#" target="_blank">Playlist 2</a>
             </div>
-            <div class="gallery-item">
-                <img src="/api/placeholder/400/300" alt="Powerlifting Training 2">
-            </div>
-            <div class="gallery-item">
-                <img src="/api/placeholder/400/300" alt="Powerlifting Training 3">
-            </div>
-            <div class="gallery-item">
-                <img src="/api/placeholder/400/300" alt="Powerlifting Training 4">
-            </div>
-        </div>
-    </section>
-
-    <section id="musica">
-        <h2 class="section-title">Mi Colección Musical</h2>
-        <div class="music-grid">
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="Oasis">
-                <h3>Oasis</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="Pulp">
-                <h3>Pulp</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="The Smiths">
-                <h3>The Smiths</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="The Verve">
-                <h3>The Verve</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="The Alan Parsons Project">
-                <h3>The Alan Parsons Project</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="The Cranberries">
-                <h3>The Cranberries</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="R.E.M">
-                <h3>R.E.M</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="Blur">
-                <h3>Blur</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="Seru Giran">
-                <h3>Seru Giran</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="Journey">
-                <h3>Journey</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="Scorpions">
-                <h3>Scorpions</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="Whitesnake">
-                <h3>Whitesnake</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="Pearl Jam">
-                <h3>Pearl Jam</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="The Police">
-                <h3>The Police</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="La Ley">
-                <h3>La Ley</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="The Beatles">
-                <h3>The Beatles</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- [Resto de secciones se mantienen igual] -->
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 José Alejandro. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
+
