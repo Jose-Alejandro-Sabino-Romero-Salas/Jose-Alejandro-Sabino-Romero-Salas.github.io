@@ -14,26 +14,27 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
+            background: linear-gradient(to bottom, #f4f4f4, #e0e0e0);
             color: #333;
         }
         header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            background: url('header-bg.jpg') no-repeat center center/cover;
             color: white;
-            padding: 20px;
             text-align: center;
+            padding: 50px 20px;
         }
         header h1 {
+            font-size: 3em;
             margin-bottom: 10px;
-            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         header p {
-            font-size: 1.2em;
+            font-size: 1.5em;
         }
         nav {
             display: flex;
             justify-content: center;
-            background: #333;
+            background: #1e3c72;
             color: white;
             padding: 10px 0;
         }
@@ -42,21 +43,28 @@
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.1em;
+            transition: color 0.3s ease;
         }
         nav a:hover {
-            text-decoration: underline;
+            color: #f4d03f;
         }
         main {
-            padding: 20px;
             max-width: 1200px;
             margin: auto;
+            padding: 20px;
         }
         section {
             margin-bottom: 30px;
             padding: 20px;
             background: white;
-            border-radius: 10px;
+            border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            border-bottom: 3px solid #1e3c72;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
         }
         section img {
             max-width: 100%;
@@ -65,12 +73,23 @@
         }
         .powerlifting {
             text-align: center;
+            background: url('powerlifting-bg.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+        }
+        .powerlifting ul {
+            list-style: none;
+        }
+        .powerlifting li {
+            margin: 10px 0;
         }
         footer {
             text-align: center;
             background: #1e3c72;
             color: white;
-            padding: 15px 0;
+            padding: 20px 10px;
+            margin-top: 20px;
         }
         footer p {
             margin: 5px 0;
@@ -82,22 +101,33 @@
             flex-wrap: wrap;
         }
         .social-links a, .playlist-links a {
+            display: inline-block;
             color: white;
             background: #333;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
             transition: background 0.3s ease;
+            font-size: 1.1em;
         }
         .social-links a:hover, .playlist-links a:hover {
             background: #555;
         }
+        .icon {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
             nav a {
-                font-size: 0.9em;
+                font-size: 1em;
+            }
+            .icon {
+                width: 20px;
+                height: 20px;
             }
         }
     </style>
@@ -105,7 +135,7 @@
 <body>
     <header>
         <h1>José Alejandro Sabino Romero Salas</h1>
-        <p>Estudiante, powerlifter y desarrollador en formación</p>
+        <p>Estudiante, Powerlifter y Desarrollador en formación</p>
     </header>
     <nav>
         <a href="#about">Sobre mí</a>
@@ -117,41 +147,36 @@
     <main>
         <section id="about">
             <h2>Sobre mí</h2>
-            <p>Mi nombre es José Alejandro, estudiante de Ciencia de la Computación en la Universidad Católica San Pablo. Además, entreno para powerlifting y disfruto desarrollando proyectos creativos.</p>
+            <p>Mi nombre es José Alejandro, estudiante de Ciencia de la Computación en la Universidad Católica San Pablo. Entreno para powerlifting y disfruto de desarrollar proyectos creativos y aprender nuevas tecnologías.</p>
         </section>
         <section id="hobbies">
             <h2>Hobbies y Gustos</h2>
-            <p>Disfruto de los videojuegos, caminar, admirar paisajes y, por supuesto, escuchar música. Mis géneros favoritos incluyen rock y britpop, con artistas como Oasis, Pulp, The Smiths, The Cranberries, y muchos más.</p>
+            <p>Disfruto jugar videojuegos, caminar, admirar paisajes y escuchar música. Soy fan del rock y sus variantes como britpop, con artistas favoritos como Oasis, Pulp, The Smiths, y muchos más.</p>
+            <img src="hobbies.jpg" alt="Hobbies">
         </section>
         <section id="projects">
             <h2>Proyectos</h2>
             <ul>
-                <li>Desarrollo de un juego junto a Jhon Vizcarra como proyecto final de Programación de Videojuegos.</li>
+                <li>Desarrollo de un juego sencillo junto a Jhon Vizcarra como proyecto final del curso Programación de Videojuegos.</li>
                 <li>Creación de una base de datos para el gimnasio <a href="https://www.instagram.com/culturalgym/?hl=es" target="_blank">Cultural Gym</a>.</li>
             </ul>
+            <img src="projects.jpg" alt="Proyectos">
         </section>
         <section id="powerlifting" class="powerlifting">
             <h2>Mi Trayectoria en Powerlifting</h2>
-            <p>Comencé a entrenar powerlifting seriamente hace un mes. Actualmente, estoy preparando mis marcas para el campeonato regional de abril.</p>
-            <p><strong>Marcas actuales:</strong></p>
+            <p>Estoy preparándome para el campeonato regional de abril. Mis marcas actuales y objetivos son:</p>
             <ul>
-                <li>Squat: 120 kg x 5 @8</li>
-                <li>Bench Press: 105 kg x 2 @9</li>
-                <li>Deadlift: 160 kg x 1 @10</li>
-            </ul>
-            <p><strong>Objetivos para abril:</strong></p>
-            <ul>
-                <li>Squat: 155 kg</li>
-                <li>Bench Press: 130 kg</li>
-                <li>Deadlift: 200 kg</li>
+                <li>Squat: <strong>120 kg</strong> x 5 @8 (Objetivo: 155 kg)</li>
+                <li>Bench Press: <strong>105 kg</strong> x 2 @9 (Objetivo: 130 kg)</li>
+                <li>Deadlift: <strong>160 kg</strong> x 1 @10 (Objetivo: 200 kg)</li>
             </ul>
         </section>
         <section id="contact">
             <h2>Contacto</h2>
             <div class="social-links">
-                <a href="#" target="_blank">Instagram</a>
-                <a href="#" target="_blank">LinkedIn</a>
-                <a href="#" target="_blank">GitHub</a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram" class="icon">Instagram</a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" class="icon">LinkedIn</a>
+                <a href="#"><img src="github-icon.png" alt="GitHub" class="icon">GitHub</a>
             </div>
             <h3>Playlists</h3>
             <div class="playlist-links">
@@ -165,4 +190,3 @@
     </footer>
 </body>
 </html>
-
