@@ -3,129 +3,436 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>José Alejandro - Página Personal</title>
+    <title>José Alejandro Sabino | Developer & Powerlifter</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #2d3436;
+            --accent-color: #e74c3c;
+            --text-color: #ecf0f1;
+            --light-bg: #2d3436;
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
         }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--primary-color);
+        }
+
+        /* Header y Navegación */
         header {
-            background: #1a1a1a;
-            color: white;
-            padding: 20px;
-            text-align: center;
+            background: rgba(26, 26, 26, 0.95);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
         }
-        header h1 {
-            margin: 0;
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        nav {
-            background: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-color);
             text-decoration: none;
-            margin: 0 15px;
+            font-family: 'Helvetica Neue', sans-serif;
         }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
         nav a:hover {
-            text-decoration: underline;
+            color: var(--accent-color);
+            transform: translateY(-2px);
         }
-        main {
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1920/1080') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 1;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.5s forwards;
+            opacity: 0;
+        }
+
+        /* Secciones */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--text-color);
+            font-size: 2.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 10px auto;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
             padding: 20px;
         }
-        section {
+
+        .about-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 400px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background: var(--light-bg);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill-card i {
+            font-size: 3rem;
+            color: var(--accent-color);
             margin-bottom: 20px;
         }
-        .powerlifting {
-            background: #f4f4f4;
-            border: 2px solid #333;
-            padding: 15px;
-            margin: 20px 0;
+
+        /* Powerlifting Section */
+        .powerlifting-section {
+            background: var(--secondary-color);
+            padding: 100px 0;
+            margin: 50px 0;
+        }
+
+        .lift-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .lift-stat {
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+
+        .lift-number {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Music Section */
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .music-card {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 10px;
             text-align: center;
         }
-        .powerlifting h2 {
-            margin-top: 0;
+
+        .music-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
         }
-        footer {
-            text-align: center;
-            background: #1a1a1a;
-            color: white;
-            padding: 10px 0;
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
-        .social-links, .playlist-links {
+
+        .project-card {
+            background: var(--light-bg);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        /* Contact Section */
+        .social-links {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 30px;
+            margin: 50px 0;
         }
-        .social-links a, .playlist-links a {
-            color: white;
-            background: #333;
-            padding: 5px 10px;
-            text-decoration: none;
-            border-radius: 5px;
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 2rem;
+            transition: transform 0.3s ease;
         }
-        .social-links a:hover, .playlist-links a:hover {
-            background: #555;
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lift-stats {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>José Alejandro Sabino Romero Salas</h1>
-        <p>Estudiante de Ciencia de la Computación y powerlifter en formación</p>
+        <div class="nav-container">
+            <a href="#" class="logo">JS</a>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre-mi">Sobre Mí</a>
+                <a href="#powerlifting">Powerlifting</a>
+                <a href="#musica">Música</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
     </header>
-    <nav>
-        <a href="#about">Acerca de mí</a>
-        <a href="#hobbies">Hobbies</a>
-        <a href="#projects">Proyectos</a>
-        <a href="#powerlifting">Powerlifting</a>
-        <a href="#contact">Contacto</a>
-    </nav>
-    <main>
-        <section id="about">
-            <h2>Acerca de mí</h2>
-            <p>Tengo 18 años y estudio Ciencia de la Computación en la Universidad Católica San Pablo. También entreno para powerlifting y manejo pequeños emprendimientos individuales.</p>
-        </section>
-        <section id="hobbies">
-            <h2>Hobbies</h2>
-            <p>Me gustan los videojuegos, escuchar música, caminar, ver paisajes y entrenar para powerlifting.</p>
-            <h3>Gustos musicales</h3>
-            <p>Disfruto el rock, britpop y rock en español. Bandas favoritas: Oasis, Pulp, The Alan Parsons Project, y más.</p>
-        </section>
-        <section id="projects">
-            <h2>Proyectos</h2>
-            <ul>
-                <li>Juego desarrollado junto a Jhon Vizcarra como parte del curso de Programación de Videojuegos.</li>
-                <li>Base de datos para el gimnasio Cultural Gym (<a href="https://www.instagram.com/culturalgym/?hl=es" target="_blank">Cultural Gym Instagram</a>).</li>
-            </ul>
-        </section>
-        <section id="powerlifting" class="powerlifting">
-            <h2>Powerlifting</h2>
-            <p>Estoy en formación como powerlifter, combinando fuerza, disciplina y técnica para mejorar mis marcas personales.</p>
-            <p>Me apasiona el levantamiento de pesas y lo considero una de las áreas más gratificantes de mi vida.</p>
-        </section>
-        <section id="contact">
-            <h2>Contacto</h2>
-            <div class="social-links">
-                <a href="#" target="_blank">Instagram</a>
-                <a href="#" target="_blank">LinkedIn</a>
-                <a href="#" target="_blank">GitHub</a>
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>José Alejandro Sabino</h1>
+            <p>Estudiante de Ciencia de la Computación | Powerlifter | Desarrollador</p>
+        </div>
+    </section>
+
+    <section id="sobre-mi">
+        <h2 class="section-title">Sobre Mí</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>¡Hola! Soy José Alejandro, también conocido como Pepe. Tengo 18 años y actualmente estudio Ciencia de la Computación en la Universidad Católica San Pablo.</p>
+                <p>Me apasiona el desarrollo de software y el powerlifting, combinando el poder de la mente y el cuerpo. Cuando no estoy programando o entrenando, disfruto de la buena música rock y los videojuegos.</p>
             </div>
-            <h3>Playlists</h3>
-            <div class="playlist-links">
-                <a href="#" target="_blank">Playlist 1</a>
-                <a href="#" target="_blank">Playlist 2</a>
+            <div class="about-image">
+                <img src="/api/placeholder/600/400" alt="José Alejandro">
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section class="powerlifting-section" id="powerlifting">
+        <h2 class="section-title">Mi Vida en el Powerlifting</h2>
+        <div class="lift-stats">
+            <div class="lift-stat">
+                <div class="lift-number">000</div>
+                <h3>Squat</h3>
+            </div>
+            <div class="lift-stat">
+                <div class="lift-number">000</div>
+                <h3>Bench Press</h3>
+            </div>
+            <div class="lift-stat">
+                <div class="lift-number">000</div>
+                <h3>Deadlift</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="musica">
+        <h2 class="section-title">Mi Música</h2>
+        <div class="music-grid">
+            <div class="music-card">
+                <img src="/api/placeholder/150/150" alt="Oasis">
+                <h3>Oasis</h3>
+            </div>
+            <div class="music-card">
+                <img src="/api/placeholder/150/150" alt="The Smiths">
+                <h3>The Smiths</h3>
+            </div>
+            <div class="music-card">
+                <img src="/api/placeholder/150/150" alt="Pulp">
+                <h3>Pulp</h3>
+            </div>
+            <div class="music-card">
+                <img src="/api/placeholder/150/150" alt="The Verve">
+                <h3>The Verve</h3>
+            </div>
+        </div>
+        <div class="playlists" style="text-align: center; margin-top: 40px;">
+            <h3>Mis Playlists</h3>
+            <!-- Espacio reservado para los enlaces de playlists -->
+        </div>
+    </section>
+
+    <section id="proyectos">
+        <h2 class="section-title">Proyectos</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/api/placeholder/400/200" alt="Videojuego">
+                </div>
+                <div class="project-content">
+                    <h3>Proyecto de Videojuego</h3>
+                    <p>Desarrollo de un juego junto a Jhon Vizcarra como proyecto final del curso Programación de Videojuegos.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/api/placeholder/400/200" alt="Base de Datos Gym">
+                </div>
+                <div class="project-content">
+                    <h3>Base de Datos Cultural Gym</h3>
+                    <p>Desarrollo de sistema de base de datos para Cultural Gym.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2 class="section-title">Conectemos</h2>
+        <div class="social-links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
     <footer>
-        <p>© 2024 José Alejandro. Todos los derechos reservados.</p>
+        <p>&copy; 2024 José Alejandro Sabino Romero Salas</p>
     </footer>
 </body>
 </html>
