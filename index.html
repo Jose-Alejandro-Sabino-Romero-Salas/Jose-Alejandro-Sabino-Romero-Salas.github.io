@@ -26,7 +26,8 @@
         body 
         {
             font-family: 'Zilla Slab', serif;
-            background-color: #211e21;
+           /* background-color: #211e21;*/
+            background-color: #21201e;
             color: white;
             margin: 0;
             padding: 0;
@@ -168,7 +169,7 @@
 
         .barra-navegacion a:hover 
         {
-            color: #f7a400;
+            color: #4d0037;
             transform: translateY(-3px);
         }
 
@@ -186,7 +187,8 @@
         #sobre-mi 
         {
             width: 100%;
-            background-color: #211e21;
+            /* background-color: #211e21;*/
+            background-color: #1e211f;
             padding: 40px 0; 
             box-sizing: border-box;
         }
@@ -204,7 +206,7 @@
         {
             font-size: clamp(2rem, 5vw, 2.5rem); 
             margin-bottom: 20px;
-            color: #f7a400;
+            color: #002f4d;
         }
 
         #sobre-mi p 
@@ -239,6 +241,7 @@
  
         #mis-hobbies 
         {
+            /* background-color: #211e21;*/
             background-color: #211e21;
         }
 
@@ -247,7 +250,7 @@
            font-size: clamp(2rem, 5vw, 2.5rem);
             /*font-size: 2.5rem;*/
             margin-bottom: 20px;
-            color: #f7a400;
+            color: #00064d;
         }
 
         #mis-hobbies img
@@ -286,7 +289,7 @@
 
         .caja-hobbie:hover 
         {
-           background-color: #f7a400;
+           background-color: #00064d;
            /*background-color: #000000;*/
         }
 
@@ -299,6 +302,7 @@
         /* Habilidades */
         #mis-habilidades 
         {
+            /* background-color: #211e21;*/
             background-color: #211e21;
         }
 
@@ -307,7 +311,7 @@
             font-size: clamp(2rem, 5vw, 2.5rem);
             /*font-size: 2.5rem;*/
             margin-bottom: 20px;
-            color: #f7a400;
+            color: #00064d;
         }
 
         .contenedor-habilidades 
@@ -332,7 +336,7 @@
 
         .caja-habilidad:hover 
         {
-            background-color: #f7a400;
+            background-color: #00064d;
         }
 
         .caja-habilidad i 
@@ -343,6 +347,7 @@
       
         #mis-habilidades 
         {
+            /* background-color: #211e21;*/
             background-color: #211e21;
         }
 
@@ -351,7 +356,7 @@
            font-size: clamp(2rem, 5vw, 2.5rem);
             /*font-size: 2.5rem;*/
             margin-bottom: 20px;
-            color: #f7a400;
+            color: #00064d;
         }
 
         .contenedor-Cursos 
@@ -399,7 +404,7 @@
 
         .btn:hover
         {
-            background-color: #f7a400;
+            background-color: #00064d;
             color: black;
             background-color: rgb(255, 196, 102);  
         }
@@ -426,7 +431,7 @@
 
         .redes-sociales a:hover 
         {
-            color: #f7a400;
+            color: #00064d;
         }
                 
         .contenedor-cantantes 
@@ -470,7 +475,7 @@
         
         .caja-cantante:hover 
         {
-            background-color: #f7a400;
+            background-color: #00064d;
             /*background-color: #000000;*/
         }
 
@@ -500,15 +505,16 @@
         .caja-cantante a:hover 
         {
             
-            background-color: #f7a400; 
+            background-color: #00064d; 
             color: black;
-            background-color: rgb(255, 196, 102);  
+            background-color: rgb(57, 84, 255);  
             /*color: #27133c;  
             border: 2px solid #f7a400; */ /* Borde amarillo */
         }
          /* Compañeros */
         #Compañeros 
         {
+            /* background-color: #211e21;*/
             background-color: #211e21;
             padding: 50px 20px;
             text-align: center;
@@ -519,7 +525,7 @@
             font-size: clamp(2rem, 5vw, 2.5rem);
            /* font-size: 2.5rem;*/
             margin-bottom: 20px;
-            color: #f7a400;
+            color: #00064d;
         }
 
         #Compañeros p 
@@ -537,7 +543,7 @@
         
         a:hover 
         {
-            color: #f7a400;  
+            color: #00064d;
         }
         
         @media screen and (max-width: 768px) {
@@ -620,6 +626,33 @@
         max-width: 90%;
     }
 }
+
+.powerlifting-section {
+            background: var(--secondary-color);
+            padding: 100px 0;
+            margin: 50px 0;
+        }
+
+        .lift-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .lift-stat {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .lift-number {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
 
                
         @media (max-width: 768px) 
@@ -748,80 +781,29 @@
         </div>
      
         <a href="https://cs.ucsp.edu.pe/wp-content/uploads/2021/04/Malla-curricular-Ciencia-de-la-Computacion.pdf" target="_blank" > Malla Curricular de Ciencia de la Computación</a>   
-    </div>
-     <!-- Hobbies -->
-     <section id="mis-hobbies" data-aos="fade-up">
-        <h2>Mis Hobbies</h2>
-        <p></p>
-      <!--  <div>
-            <i class="fas fa-guitar"></i> <span>Tocar guitarra</span><br>
-            <i class="fas fa-headphones"></i> <span>Escuchar música</span><br>
-            <i class="fas fa-camera"></i> <span>Fotografía</span><br>
-        </div>
-        <img src="https://via.placeholder.com/400" alt="Imagen relacionada con tus hobbies">
-        <a href="#" class="btn">Poner imagen de hobby</a>-->
-        <div class="contenedor-hobbies">
-            <div class="caja-hobbie" data-aos="flip-left">
-                <i class="fas fa-guitar"></i>
-                <h3>Mis hobbies Musicales</h3>
-                <p>Uno de mis mayores hobbies es tocar instrumentos musicales, especialmente los de cuerda y viento. La guitarra y la flauta traversa son mis favoritos, ya que 
-                    me permiten expresar emociones a través de la música. Estoy constantemente aprendiendo nuevas canciones y 
-                    técnicas, y me encantaría seguir expandiendo mis conocimientos musicales, explorando más géneros y aprendiendo otros instrumentos
-                </p>
-                <a href="https://es.wikipedia.org/wiki/Guitarra" target="_blank" class="btn">Descubre qué es la guitarra </a>
-                <a href="https://es.wikipedia.org/wiki/Ukelele" target="_blank" class="btn">Descubre qué es el ukulele </a>
 
+
+
+
+
+<section class="powerlifting-section" id="powerlifting">
+        <h2 class="section-title">Mi Vida en el Powerlifting</h2>
+        <div class="lift-stats">
+            <div class="lift-stat">
+                <div class="lift-number">000</div>
+                <h3>Squat</h3>
             </div>
-            <div class="caja-hobbie" data-aos="flip-left">
-                <i class="fas fa-book"></i>
-                <h3>Leer</h3>
-                <p>Leer es uno de mis pasatiempos favoritos. Uno de mis libros favoritos es <em>Demian</em> de Hermann Hesse,
-                    una obra que profundiza en el proceso de autodescubrimiento y la dualidad del ser humano.
-                </p>
-                 
-                <a href="https://es.wikipedia.org/wiki/Demian" target="_blank" class="btn"> <em>Demian</em> de Hermann Hesse</a>
-
+            <div class="lift-stat">
+                <div class="lift-number">000</div>
+                <h3>Bench Press</h3>
             </div>
-            <div class="caja-hobbie" data-aos="flip-left">
-                <i class="fas fa-table-tennis"></i> 
-                <h3>Tenis de mesa</h3>
-                <p>Me encanta jugar al tenis de mesa con mis amistades.
-                     Me ayuda a pasar un buen rato; es un pasatiempo muy divertido.</p>
-                     <a href="https://es.wikipedia.org/wiki/Tenis_de_mesa" target="_blank" class="btn"> Descubre qué es el Tenis de</a>
-
+            <div class="lift-stat">
+                <div class="lift-number">000</div>
+                <h3>Deadlift</h3>
             </div>
         </div>
     </section>
-
- 
-</section>
-      <!--  Habilidades -->
-        <!--
-      <section id="mis-habilidades" data-aos="fade-up">
-        <h2>Mis Habilidades</h2>
-        <div class="contenedor-habilidades">
-            <div class="caja-habilidad" data-aos="flip-left">
-                <i class="fas fa-code"></i>
-                <h3>Dormir</h3>
-                <p>Dormir</p>
-                <a href="#" class="btn">link</a>
-            </div>
-            <div class="caja-habilidad" data-aos="flip-left">
-                <i class="fas fa-paint-brush"></i>
-                <h3>nose</h3>
-                <p>:c</p>
-                <a href="#" class="btn">link</a>
-            </div>
-            <div class="caja-habilidad" data-aos="flip-left">
-                <i class="fas fa-camera"></i>
-                <h3>Fotografía</h3>
-                <p>Fotografía </p>
-                <a href="#" class="btn">link</a>
-            </div>
-        </div>
-    </section>
-    -->
-   
+       
 <section id="cantantes-favoritos" data-aos="flip-left">
     <h2>Música favoritas</h2>
     <p>Conoce a mis artistas favoritos.</p>
@@ -879,7 +861,6 @@
         <!--4-->
         <div class="caja-cantante">
             <img src="#">
-           <!-- <h3>Adèle Castillon - VideoClub</h3>-->
             <h3 h3></h3>
             <p> <p>
             <a href="https://open.spotify.com/artist/0k17h0D3J5VfsdmQ1iZtE9?si=fFY8WeiISNGH2mOHai22bA" target="_blank" class="spotify-link">
