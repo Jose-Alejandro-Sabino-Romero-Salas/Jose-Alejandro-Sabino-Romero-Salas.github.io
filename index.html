@@ -224,21 +224,35 @@
         {
              background-color: #444444;     
         }
-        /*
-        #sobre-mi img 
-        {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin-top: 20px;
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+
+.powerlifting-section {
+            background: var(--secondary-color);
+            padding: 100px 0;
+            margin: 50px 0;
         }
-            */
- 
+
+        .lift-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .lift-stat {
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+
+        .lift-number {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        
+
         #mis-hobbies 
         {
             /* background-color: #211e21;*/
@@ -713,8 +727,8 @@
         <a href="#sobre-mi">Sobre mí</a>
         <!--<a href="#mis-habilidades">Habilidades</a>-->
         <a href="#mis-cursos">Cursos</a>
-        <a href="#mis-hobbies">Hobbies</a>
-        <a href="#cantantes-favoritos">Gustos Musicales</a>
+        <a href="#mis-hobbies">Powerlifting</a>
+        <a href="#cantantes-favoritos">Artistas Favoritos</a>
         <a href="#Compañeros">Compañeros</a>
         <a href="#contacto">Contacto</a>
     </nav>
@@ -773,7 +787,26 @@
         
         </div>
      
-        <a href="https://cs.ucsp.edu.pe/wp-content/uploads/2021/04/Malla-curricular-Ciencia-de-la-Computacion.pdf" target="_blank" > Malla Curricular de Ciencia de la Computación</a>   
+        <a href="https://cs.ucsp.edu.pe/wp-content/uploads/2021/04/Malla-curricular-Ciencia-de-la-Computacion.pdf" target="_blank" > Malla Curricular de Ciencia de la Computación</a> 
+
+
+<section class="powerlifting-section" id="powerlifting">
+        <h2 class="section-title">Mi Vida en el Powerlifting</h2>
+        <div class="lift-stats">
+            <div class="lift-stat">
+                <div class="lift-number">000</div>
+                <h3>Squat</h3>
+            </div>
+            <div class="lift-stat">
+                <div class="lift-number">000</div>
+                <h3>Bench Press</h3>
+            </div>
+            <div class="lift-stat">
+                <div class="lift-number">000</div>
+                <h3>Deadlift</h3>
+            </div>
+        </div>
+    </section>
 
 
    
