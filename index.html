@@ -1,439 +1,1012 @@
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Página personal de Alice Gabriela Sucasaca Ilasaca, estudiante de Ciencias de la Computación, con detalles sobre su experiencia, hobbies, habilidades y más.">
+    <meta name="keywords" content="Alice Gabriela Sucasaca Ilasaca, estudiante, informática, habilidades, hobbies, cursos, música, gustos musicales">
+    <meta name="author" content="Alice Gabriela Sucasaca Ilasaca">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>José Alejandro Sabino | Developer & Powerlifter</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #1a1a1a;
-            --secondary-color: #2d3436;
-            --accent-color: #e74c3c;
-            --text-color: #ecf0f1;
-            --light-bg: #2d3436;
-        }
+    <meta name="robots" content="index, follow">
+    <title>Alice Gabriela Sucasaca Ilasaca</title>
 
-        * {
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!--  -->
+    <style>
+        /* General */
+        body 
+        {
+            font-family: 'Zilla Slab', serif;
+            background-color: #211e21;
+            color: white;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            transition: all 0.3s ease;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background: var(--primary-color);
-        }
-
-        /* Header y Navegación */
-        header {
-            background: rgba(26, 26, 26, 0.95);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--text-color);
-            text-decoration: none;
-            font-family: 'Helvetica Neue', sans-serif;
-        }
-
-        nav {
-            display: flex;
-            gap: 20px;
-        }
-
-        nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 5px 15px;
-            border-radius: 4px;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            color: var(--accent-color);
-            transform: translateY(-2px);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1920/1080') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            z-index: 1;
-            padding: 0 20px;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            animation: fadeInDown 1s ease;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease 0.5s forwards;
-            opacity: 0;
-        }
-
-        /* Secciones */
-        section {
-            padding: 100px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            color: var(--text-color);
-            font-size: 2.5rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 3px;
-            background: var(--accent-color);
-            margin: 10px auto;
-        }
-
-        /* About Section */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .about-text {
-            padding: 20px;
-        }
-
-        .about-image {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            height: 400px;
-        }
-
-        .about-image img {
+            overflow-x: hidden;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            box-sizing: border-box;
         }
 
-        /* Skills Section */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+        a 
+        {
+            text-decoration: none;
+            color: white;
         }
 
-        .skill-card {
-            background: var(--light-bg);
-            border-radius: 10px;
-            padding: 30px;
+      
+
+        .cabecera
+     {
+        background-image: url('img/fonditocool.jpg'); 
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat; 
+        height: 100vh; 
+        min-height: 100vh;
+        width: 100%; 
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start; 
+        align-items: center;
+        padding-left: 5%;
+        text-align: center;
+        color: white;
+        position: relative;
+        background-attachment: scroll;
+        /*background-attachment: fixed;*/
+        z-index: 0;
+        overflow: hidden; 
+    }
+ 
+     
+
+       
+        
+        .cabecera::after
+         {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px; 
+       
+            
+            
+        }
+
+        .cabecera .titulo-pagina 
+        {
+            /*font-size: 3rem;*/
+            font-size: clamp(2rem, 6vw, 3rem);
+            text-shadow: 3px 3px 5px rgba(56, 46, 46, 0.7);
+            z-index: 2; 
+            padding: 10px 30px;
+        }
+        .cabecera .subtitulo 
+        {
+          /*  font-size: 1.2rem;*/
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: white;
+            margin-top: 20px;
+            z-index: 2;
+            padding-left: 30px;
+        }
+        
+
+        .titulo-pagina
+        {
+            transition: transform 0.5s ease-out;
+        }
+
+        .titulo-pagina:hover 
+        {
+            transform: scale(1.1);  
+            
+        }
+
+
+  /*     
+        .barra-navegacion 
+        {
+            position: sticky;
+            top: 0;
+            width: 100%; 
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
             text-align: center;
-            transition: transform 0.3s ease;
+            z-index: 10;
+            font-family: 'Kode Mono', monospace;
+            
         }
 
-        .skill-card:hover {
-            transform: translateY(-10px);
+        .barra-navegacion a 
+        {
+            color: white;
+            margin: 0 20px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+*/
+        
+        
+        .barra-navegacion 
+        {
+            position: sticky;
+            top: 0;
+            width: 100%; 
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            z-index: 10;
+            font-family: 'Kode Mono', monospace;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
         }
 
-        .skill-card i {
-            font-size: 3rem;
-            color: var(--accent-color);
+      
+        .barra-navegacion a
+         {
+            color: white;
+            margin: 0 20px; 
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .barra-navegacion a:hover 
+        {
+            color: #f7a400;
+            transform: translateY(-3px);
+        }
+
+        /* S */
+        section 
+        {
+            padding: 60px 20px;
+            text-align: center;
+            
+            width: 100%;
+        }
+
+
+    
+        #sobre-mi 
+        {
+            width: 100%;
+            background-color: #211e21;
+            padding: 40px 0; 
+            box-sizing: border-box;
+        }
+
+        #sobre-mi .contenido 
+        {
+            max-width: 800px;  
+            margin: 0 auto;     
+            padding-left: 20px; 
+            padding-right: 20px;
+            text-align: left; 
+        }
+
+        #sobre-mi h2 
+        {
+            font-size: clamp(2rem, 5vw, 2.5rem); 
             margin-bottom: 20px;
+            color: #f7a400;
         }
 
-        /* Powerlifting Section */
-        .powerlifting-section {
-            background: var(--secondary-color);
-            padding: 100px 0;
-            margin: 50px 0;
+        #sobre-mi p 
+        {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6; 
+        }
+        #sobre-mi .contenido:hover
+        {
+             background-color: transparent; 
         }
 
-        .lift-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            text-align: center;
-            margin-top: 50px;
+        .caja-hobbie:hover, .caja-habilidad:hover, .caja-Cursos:hover, .caja-cantante:hover 
+        {
+             background-color: #444;     
+        }
+        /*
+        #sobre-mi img 
+        {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+            */
+ 
+        #mis-hobbies 
+        {
+            background-color: #211e21;
         }
 
-        .lift-stat {
+        #mis-hobbies h2 
+        {
+           font-size: clamp(2rem, 5vw, 2.5rem);
+            /*font-size: 2.5rem;*/
+            margin-bottom: 20px;
+            color: #f7a400;
+        }
+
+        #mis-hobbies img
+        {
+            /*
+            width: 400px;
+            margin-top: 20px;
+        */
+             width: 100%;
+            max-width: 400px;
+            margin-top: 20px;
+        }
+
+        .contenedor-hobbies 
+        {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .caja-hobbie
+        {
+            background-color: #444;
+            color: white;
             padding: 20px;
-            background: rgba(255,255,255,0.1);
+              width: 100%;
+            max-width: 300px;
+            margin:10px;
+            box-sizing:border- box;
             border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
         }
 
-        .lift-number {
-            font-size: 2.5rem;
-            color: var(--accent-color);
-            font-weight: bold;
+        .caja-hobbie:hover 
+        {
+           background-color: #f7a400;
+           /*background-color: #000000;*/
         }
 
-        /* Music Section */
-        .music-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        .caja-hobbie i 
+        {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+  
+        /* Habilidades */
+        #mis-habilidades 
+        {
+            background-color: #211e21;
+        }
+
+        #mis-habilidades h2 
+        {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            /*font-size: 2.5rem;*/
+            margin-bottom: 20px;
+            color: #f7a400;
+        }
+
+        .contenedor-habilidades 
+        {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .caja-habilidad 
+        {
+            background-color: #555;
+            color: white;
+            padding: 20px;
+            width: 30%;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .caja-habilidad:hover 
+        {
+            background-color: #f7a400;
+        }
+
+        .caja-habilidad i 
+        {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+      
+        #mis-habilidades 
+        {
+            background-color: #211e21;
+        }
+
+        #mis-habilidades h2 
+        {
+           font-size: clamp(2rem, 5vw, 2.5rem);
+            /*font-size: 2.5rem;*/
+            margin-bottom: 20px;
+            color: #f7a400;
+        }
+
+        .contenedor-Cursos 
+        {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .caja-Cursos
+        {
+            background-color: #555;
+            color: white;
+            padding: 20px;
+            width: 30%;
+            border-radius: 10px;
+            text-align: center;
+            margin: 0 auto 20px auto;
+            transition: background-color 0.3s ease;
+        }
+
+        .caja-Cursos:hover 
+        {
+            background-color: rgb(0, 0, 0); 
+        }
+
+        .caja-Cursos i 
+        {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .btn 
+        {
+            background-color: #1e0f2d;
+            color: white;
+            padding: 12px 25px;
+            margin: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover
+        {
+            background-color: #f7a400;
+            color: black;
+            background-color: rgb(255, 196, 102);  
+        }
+
+        footer 
+        {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+      
+        .redes-sociales a 
+        {
+            font-size: 2rem;
+            color: white;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .redes-sociales a:hover 
+        {
+            color: #f7a400;
+        }
+                
+        .contenedor-cantantes 
+        {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
             gap: 20px;
         }
 
-        .music-card {
-            background: var(--light-bg);
-            padding: 20px;
-            border-radius: 10px;
+       
+        .caja-cantante 
+        {
+            background-color: #555;
+            color: white;
+            width: 22%;
             text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+            box-sizing: border-box;
         }
-
-        .music-card img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+/*
+        .caja-cantante img 
+        {
+            width: 100%;
+            border-radius: 10px;
             margin-bottom: 15px;
         }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background: var(--light-bg);
+*/
+        .caja-cantante img 
+        {
+            width: 100px;     
+            max-width: 200px;
+            height: auto;     
             border-radius: 10px;
-            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        
+        .caja-cantante:hover 
+        {
+            background-color: #f7a400;
+            /*background-color: #000000;*/
         }
 
-        .project-image {
-            height: 200px;
-            overflow: hidden;
+     
+        .caja-cantante h3 
+        {
+            
+            /*font-size: 1.5rem;*/
+            margin-bottom: 10px;
         }
 
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        
+        .caja-cantante a 
+        {
+            display: inline-block;
+            background-color: #1e0f2d;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            /*
+            border: 2px solid transparent;
+             transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;*/
+           transition: background-color 0.3s ease;
         }
 
-        .project-content {
-            padding: 20px;
+        .caja-cantante a:hover 
+        {
+            
+            background-color: #f7a400; 
+            color: black;
+            background-color: rgb(255, 196, 102);  
+            /*color: #27133c;  
+            border: 2px solid #f7a400; */ /* Borde amarillo */
         }
-
-        /* Contact Section */
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 50px 0;
-        }
-
-        .social-links a {
-            color: var(--text-color);
-            font-size: 2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: var(--accent-color);
-            transform: translateY(-5px);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--secondary-color);
+         /* Compañeros */
+        #Compañeros 
+        {
+            background-color: #211e21;
+            padding: 50px 20px;
             text-align: center;
-            padding: 30px 20px;
         }
 
-        /* Animaciones */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        #Compañeros h2 
+        {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+           /* font-size: 2.5rem;*/
+            margin-bottom: 20px;
+            color: #f7a400;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        #Compañeros p 
+        {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+    
+        a 
+        {
+            color: white; 
+            text-decoration: none; 
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
+        
+        a:hover 
+        {
+            color: #f7a400;  
+        }
+        
+        @media screen and (max-width: 768px) {
+            .cabecera
+             {
+                background-attachment: scroll;
+                /*background-attachment: fixed;*/
+                height: 100vh; 
+                background-size: cover; 
+                background-position: center center;
+                min-height: 100vh; 
+                width: 100%;
+                margin: 0; 
+                padding: 0; 
+            }
+            .cabecera .titulo-pagina
+            {
                 font-size: 2.5rem;
             }
 
-            .about-grid {
-                grid-template-columns: 1fr;
+            .cabecera .subtitulo 
+            {
+                font-size: 1rem;
+                padding-left: 10px;
             }
 
-            .lift-stats {
-                grid-template-columns: 1fr;
+            .contenedor-hobbies,
+            .contenedor-habilidades,
+            .contenedor-cantantes 
+            {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .caja-hobbie,
+            .caja-habilidad,
+            .caja-cantante 
+            {
+                width: 45%;
+                margin-bottom: 10px;
+            }
+
+            .barra-navegacion a {
+                font-size: 0.9rem;
+                margin: 0 10px;
             }
         }
+
+     @media (max-width: 480px) {
+    .cabecera .titulo-pagina {
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
+    }
+    .cabecera .subtitulo {
+        font-size: 1rem;
+    }
+    .caja-hobbie, .caja-habilidad, .caja-cantante {
+        width: 90%;
+    }
+    #sobre-mi h2 {
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
+    }
+    #sobre-mi p {
+        font-size: 0.9rem;
+        max-width: 90%;
+    }
+    #sobre-mi .contenido {
+        padding-left: 1cm;
+        padding-right: 1cm;
+    }
+    .barra-navegacion a {
+        font-size: 0.8rem;
+        margin: 8px 10px;
+    }
+    .barra-navegacion {
+        justify-content: space-around;
+    }
+    .caja-Cursos {
+        padding: 15px;
+        width: 90%;
+        max-width: 90%;
+    }
+}
+
+               
+        @media (max-width: 768px) 
+        {
+            #sobre-mi h2 
+            {
+                font-size: clamp(1.5rem, 5vw, 2rem); 
+            }
+
+            #sobre-mi p 
+            {
+                font-size: 1rem;
+                max-width: 95%;
+            }
+            /*
+            #sobre-mi img 
+            {
+                width: 150px;  
+            }
+            */
+          
+            #sobre-mi .contenido {
+                padding-left: 2cm;
+                padding-right: 2cm;
+            }
+        }
+
+
+               
+        @media (max-width: 768px) 
+        {
+            .barra-navegacion 
+            {
+                padding: 10px 15px; 
+            }
+            .barra-navegacion a 
+            {
+                font-size: 0.9rem; 
+                margin: 8px 15px; 
+            }
+        }
+
+   
+      
     </style>
 </head>
+
 <body>
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo">JS</a>
-            <nav>
-                <a href="#inicio">Inicio</a>
-                <a href="#sobre-mi">Sobre Mí</a>
-                <a href="#powerlifting">Powerlifting</a>
-                <a href="#musica">Música</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
-        </div>
-    </header>
 
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <h1>José Alejandro Sabino</h1>
-            <p>Estudiante de Ciencia de la Computación | Powerlifter | Desarrollador</p>
+
+    <div class="cabecera">
+        <h1 class="titulo-pagina"> José Alejandro</h1>
+        <p class="subtitulo">Computer Science Student | Powerlifter</p>
+    </div>
+
+
+    <nav class="barra-navegacion">
+        <a href="#sobre-mi">Sobre mí</a>
+        <!--<a href="#mis-habilidades">Habilidades</a>-->
+        <a href="#mis-cursos">Cursos</a>
+        <a href="#mis-hobbies">Hobbies</a>
+        <a href="#cantantes-favoritos">Gustos Musicales</a>
+        <a href="#Compañeros">Compañeros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="sobre-mi" data-aos="fade-up">
+        <div class = "contenido">
+              <h2>Sobre mí</h2>
+              <p>Mi nombre es José Alejandro Romero Salas, tengo 18 años, actualmente me encuentro
+                    en el segundo semestre de la carrera de Ciencia de la Computación
+                    en la Universidad Católica San Pablo.
+              </p>
+
+    
+    </section>
+
+   
+   <!--  Cursos -->
+   <section id="mis-cursos" data-aos="fade-up">
+    <h2>Cursos que llevo este semestre</h2>
+    <div class="contenedor-Cursos">
+        
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-code"></i>
+            <h3>Introducción a Ciencia de la Computación </h3>
+            <a href="https://ecuadros.blogspot.com/" target="_blank" > Ernesto Cuadros-Vargas</a>   
+        </div> 
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-code"></i>
+            <h3>Ciencia de la Computación 1</h3>
+            <a href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=54641" target="_blank" > Manuel Eduardo Loaiza Fernandez</a>   
+           
+        </div>
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-code"></i>
+            <h3>Estructuras discretas 2</h3>
+            <a href="https://ctivitae.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=11109" target="_blank" > Luis Díaz Basurco</a>   
+        
+        </div>
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-book"></i>
+            <h3>Matemática 2 </h3>
+            <a href="https://dina.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=64121" target="_blank" > Ingrid Zayda Villanueva Vega</a>   
+        
+        </div>
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-book"></i>
+            <h3>Introducción a la Filosofía </h3>
+            <a href="" target="_blank" > Pierina Pacheco Leyton </a>   
+        
+        </div>
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-guitar"></i>
+            <h3>Apreciación Musical </h3>
+            <a href="#" target="_blank" > Jorge Lovón Caparó</a>   
+        
+        </div>
+
+        </div>
+        <div class="caja-Cursos" data-aos="flip-left">
+            <i class="fas fa-book"></i>
+            <h3>Artes Plásticas </h3>
+            <a href="" target="_blank" > Gabriela Mamani</a>   
+        
+        </div>
+     
+        <a href="https://cs.ucsp.edu.pe/wp-content/uploads/2021/04/Malla-curricular-Ciencia-de-la-Computacion.pdf" target="_blank" > Malla Curricular de Ciencia de la Computación</a>   
+    </div>
+     <!-- Hobbies -->
+     <section id="mis-hobbies" data-aos="fade-up">
+        <h2>Mis Hobbies</h2>
+        <p></p>
+      <!--  <div>
+            <i class="fas fa-guitar"></i> <span>Tocar guitarra</span><br>
+            <i class="fas fa-headphones"></i> <span>Escuchar música</span><br>
+            <i class="fas fa-camera"></i> <span>Fotografía</span><br>
+        </div>
+        <img src="https://via.placeholder.com/400" alt="Imagen relacionada con tus hobbies">
+        <a href="#" class="btn">Poner imagen de hobby</a>-->
+        <div class="contenedor-hobbies">
+            <div class="caja-hobbie" data-aos="flip-left">
+                <i class="fas fa-guitar"></i>
+                <h3>Mis hobbies Musicales</h3>
+                <p>Uno de mis mayores hobbies es tocar instrumentos musicales, especialmente los de cuerda y viento. La guitarra y la flauta traversa son mis favoritos, ya que 
+                    me permiten expresar emociones a través de la música. Estoy constantemente aprendiendo nuevas canciones y 
+                    técnicas, y me encantaría seguir expandiendo mis conocimientos musicales, explorando más géneros y aprendiendo otros instrumentos
+                </p>
+                <a href="https://es.wikipedia.org/wiki/Guitarra" target="_blank" class="btn">Descubre qué es la guitarra </a>
+                <a href="https://es.wikipedia.org/wiki/Ukelele" target="_blank" class="btn">Descubre qué es el ukulele </a>
+
+            </div>
+            <div class="caja-hobbie" data-aos="flip-left">
+                <i class="fas fa-book"></i>
+                <h3>Leer</h3>
+                <p>Leer es uno de mis pasatiempos favoritos. Uno de mis libros favoritos es <em>Demian</em> de Hermann Hesse,
+                    una obra que profundiza en el proceso de autodescubrimiento y la dualidad del ser humano.
+                </p>
+                 
+                <a href="https://es.wikipedia.org/wiki/Demian" target="_blank" class="btn"> <em>Demian</em> de Hermann Hesse</a>
+
+            </div>
+            <div class="caja-hobbie" data-aos="flip-left">
+                <i class="fas fa-table-tennis"></i> 
+                <h3>Tenis de mesa</h3>
+                <p>Me encanta jugar al tenis de mesa con mis amistades.
+                     Me ayuda a pasar un buen rato; es un pasatiempo muy divertido.</p>
+                     <a href="https://es.wikipedia.org/wiki/Tenis_de_mesa" target="_blank" class="btn"> Descubre qué es el Tenis de</a>
+
+            </div>
         </div>
     </section>
 
-    <section id="sobre-mi">
-        <h2 class="section-title">Sobre Mí</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>¡Hola! Soy José Alejandro. Tengo 18 años y actualmente estudio Ciencia de la Computación en la Universidad Católica San Pablo.</p>
-                <p>Me apasiona el desarrollo de software y el powerlifting. Cuando no estoy programando o entrenando, disfruto del rock y los videojuegos.</p>
+ 
+</section>
+      <!--  Habilidades -->
+        <!--
+      <section id="mis-habilidades" data-aos="fade-up">
+        <h2>Mis Habilidades</h2>
+        <div class="contenedor-habilidades">
+            <div class="caja-habilidad" data-aos="flip-left">
+                <i class="fas fa-code"></i>
+                <h3>Dormir</h3>
+                <p>Dormir</p>
+                <a href="#" class="btn">link</a>
             </div>
-            <div class="about-image">
-                <img src="/api/placeholder/600/400" alt="José Alejandro">
+            <div class="caja-habilidad" data-aos="flip-left">
+                <i class="fas fa-paint-brush"></i>
+                <h3>nose</h3>
+                <p>:c</p>
+                <a href="#" class="btn">link</a>
+            </div>
+            <div class="caja-habilidad" data-aos="flip-left">
+                <i class="fas fa-camera"></i>
+                <h3>Fotografía</h3>
+                <p>Fotografía </p>
+                <a href="#" class="btn">link</a>
             </div>
         </div>
+    </section>
+    -->
+   
+<section id="cantantes-favoritos" data-aos="flip-left">
+    <h2>Música favoritas</h2>
+    <p>Conoce a mis artistas favoritos.</p>
+    
+    <div class="contenedor-cantantes">
+        
+        
+        <div class="caja-cantante">
+           <img src="#" >
+           <h3></h3>
+           <a href="https://open.spotify.com/artist/0f3EsoviYnRKTkmayI3cux?si=RgCDG4p1SqiKESryLpBlPg" target="_blank" class="spotify-link">
+               <i class="fab fa-spotify"></i> Men At Work
+           </a>
+       </div>
+       
+       <div class="caja-cantante">
+        <img src="#" >
+        <h3></h3>
+        <a href="https://open.spotify.com/artist/4bthk9UfsYUYdcFyqxmSUU?si=EgKWlTT8QoacD7SRPIDeNA" target="_blank" class="spotify-link">
+            <i class="fab fa-spotify"></i> Tears for Fears
+        </a>
+    </div>
+        <!--1-->
+        <div class="caja-cantante">
+            <img src="#">
+            <h3></h3>
+            
+            <a href="https://open.spotify.com/artist/6i6WlGzQtXtz7GcC5H5st5?si=zzvIkGUtSAuBfaGD0HD1kw" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> 10cc
+            </a>
+        </div>
+        <!--2-->
+        <div class="caja-cantante">
+            <img src="img/Chase atlantic.jpg">
+            <h3></h3>
+            <a href="https://open.spotify.com/artist/2m62cc253Xvd9qYQ8d2X3d?si=Rytx9NrWSqyl18s_twOINw" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> The Alan Parsons Project
+            </a>
+        </div>
+        <!--3-->
+        <div class="caja-cantante">
+            <img src="#" >
+            <h3></h3>
+            <a href="https://open.spotify.com/artist/5NGO30tJxFlKixkPSgXcFE?si=OSRoJGDeRmacJrWvkT96YA" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> The Police
+            </a>
+        </div>
+        <div class="caja-cantante">
+            <img src="#" >
+            <h3></h3>
+            <a href="https://open.spotify.com/artist/7MhMgCo0Bl0Kukl93PZbYS?si=xBKLM440QBKKae8TiZ34mg" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Blur
+            </a>
+        </div>
+        <!--4-->
+        <div class="caja-cantante">
+            <img src="#">
+           <!-- <h3>Adèle Castillon - VideoClub</h3>-->
+            <h3 h3></h3>
+            <p> <p>
+            <a href="https://open.spotify.com/artist/0k17h0D3J5VfsdmQ1iZtE9?si=fFY8WeiISNGH2mOHai22bA" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Pink Floyd
+            </a>
+            <p> <p></p>
+            <a href="https://open.spotify.com/artist/2DaxqgrOhkeH0fpeiQq2f4?si=TN_qO7CPTwqXsZ2hB3wNFQ" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Oasis
+            </a>
+        </div>
+        <!--5-->
+        <div class="caja-cantante">
+            <img src="img/Centimillimental.jpg" >
+            <h3></h3>
+            <a href="https://open.spotify.com/artist/0rvjqX7ttXeg3mTy8Xscbt?si=04w_Vl3nQqKSvK7m71d2bQ" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Journey
+            </a>
+        </div>
+        <!--6-->
+        <div class="caja-cantante">
+            <img src="img/Joe Hisaishi.jpg">
+            <h3></h3>
+            <a href="https://open.spotify.com/artist/6CrQKZeuSKNYgrE7PeYqJ1?si=Ru5arJvHQB-uWL8D-1zzgg" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Serú Girán
+            </a>
+        </div>
+        <!--7-->
+        <div class="caja-cantante">
+            <img src="img/Pedro Suarez Vertiz.jpg" >
+            <h3></h3>
+            <a href="https://open.spotify.com/artist/7t0rwkOPGlDPEhaOcVtOt9?si=voJPc5cOSwO7FN4IdNmcow" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> The Cranberries
+            </a>
+        </div>
+
+
+         <!--9-->
+         <div class="caja-cantante">
+            <img src="img/Hombres G.jpg" >
+            <h3></h3>
+            <a href="https://open.spotify.com/intl-es/artist/60uh2KYYSCqAgJNxcU4DA0?si=qavlzUzyR9qZNfZSogZYrQ" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Hombres G
+            </a>
+
+        
+         <!--11-->
+         <div class="caja-cantante">
+            <img src="#">
+            <h3></h3>
+            <a href="https://open.spotify.com/artist/0xliTEbFfy5HQHvsTknTkX?si=l-VbQ3FMSO-QV3TQ9phZjA" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Alphaville
+            </a>
+        </div>
+        
+         <!--12-->
+         <div class="caja-cantante">
+            <img src="#" alt="The Strokes">
+            <h3></h3>
+            <a href="https://open.spotify.com/artist/3JsMj0DEzyWc0VDlHuy9Bx?si=duBeo0JtTs-RWSvfjIJ_HQ" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> Supertramp
+            </a>
+        </div>
+        <div class="caja-cantante">
+            <img src="#">
+            <h3></h3>
+            <a href="https://open.spotify.com/artist/3yY2gUcIsjMr8hjo51PoJ8?si=D0hJDMAGTgqrONAyKXRu8g" target="_blank" class="spotify-link">
+                <i class="fab fa-spotify"></i> The Smiths
+        </div>
+
+
+
+    </div>
+</section>
+    
+    <!--  Compañeros -->
+    <section id="Compañeros" data-aos="fade-up">
+        <h2>Visita las páginas de mis compañeros</h2>
+        <p>
+            <a href="https://mv1323.github.io/miguelvilchezgustavson.github.io/" target="_blank" class="btn">Miguel Vilchez</a>
+            <a href="https://alice-gabriela-sucasaca-i.github.io/" target="_blank" class="btn">Alice Sucasaca</a>
+        <p>
+            <a href="https://leonardoloayza.github.io/" target="_blank" class="btn">Leonardo Loayza </a>
+            <a href="https://paolojoaquingomezmanrique.github.io/ICC/ " target="_blank" class="btn">Paolo Gómez </a>
+        </p>        
+           
+        </p>
+
+    </section>
+    <!--  Contacto -->
+    <section id="contacto" data-aos="fade-up">
+        <h2>Contacto</h2>
+        <p>Si quieres saber más sobre mí o colaborar en algún proyecto, no dudes en ponerte en contacto.</p>
+        <p>Email: alice.sucasaca@ucsp.edu.pe</p>
+        <div class="redes-sociales">
+            
+            <a href="https://open.spotify.com/user/iumv5hwblvpqq7ec0nkgy89j6?si=76e34a6cef774579" class="fab fa-spotify"></a>
+            
+
+            --><a href="https://www.instagram.com/powwer__hub/ " target="_blank">
+                <i class="fab fa-instagram"></i> 
+            
+            <a href=" https://www.linkedin.com/in/jos%C3%A9-alejandro-romero-salas-56962b313/" target="_blank">
+                <i class="fab fa-linkedin"></i> 
+            <a href="https://github.com/Jose-Alejandro-Sabino-Romero-Salas" target="_blank">
+                <i class="fab fa-github"></i> 
+            </a>
+            
+        </div>
+      <!--  <a href="#" class="btn">Contactar</a> -->
     </section>
 
-    <section class="powerlifting-section" id="powerlifting">
-        <h2 class="section-title">Mi Vida en el Powerlifting</h2>
-        <div class="lift-stats">
-            <div class="lift-stat">
-                <div class="lift-number">000</div>
-                <h3>Squat</h3>
-            </div>
-            <div class="lift-stat">
-                <div class="lift-number">000</div>
-                <h3>Bench Press</h3>
-            </div>
-            <div class="lift-stat">
-                <div class="lift-number">000</div>
-                <h3>Deadlift</h3>
-            </div>
-        </div>
-    </section>
-    <section id="musica">
-        <h2 class="section-title">Mi Música</h2>
-        <div class="music-grid">
-            <div class="music-card">
-                <img src="Downloads/Oasis" alt="Oasis">
-                <h3>Oasis</h3>
-            </div>
-            <div class="music-card">
-                <img src="/api/placeholder/150/150" alt="The Smiths">
-                <h3>The Smiths</h3>
-            </div>
-            <div class="music-card">
-                <img src="Downloads/Pulp" alt="Pulp">
-                <h3>Pulp</h3>
-            </div>
-            <div class="music-card">
-                <img src="Downloads/The Verve" alt="The Verve">
-                <h3>The Verve</h3>
-            </div>
-        </div>
-        <div class="playlists" style="text-align: center; margin-top: 40px;">
-            <h3>Mis Playlists</h3>
-            <!-- Espacio reservado para los enlaces de playlists -->
-            <a href="https://open.spotify.com/playlist/3BbkKdKPVYb7KWkEov4zJJ?si=f967dab25e784650" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://open.spotify.com/playlist/2EA8PAKHkefmwnzRwRmoh5?si=77d28cc2fc7641cd" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-    </section>
-
-    <section id="proyectos">
-        <h2 class="section-title">Proyectos</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="/api/placeholder/400/200" alt="Videojuego">
-                </div>
-                <div class="project-content">
-                    <h3>Proyecto de Videojuego</h3>
-                    <p>Desarrollo de un juego junto a Jhon Vizcarra como proyecto final del curso Programación de Videojuegos.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="/api/placeholder/400/200" alt="Base de Datos Gym">
-                </div>
-                <div class="project-content">
-                    <h3>Base de Datos Cultural Gym</h3>
-                    <p>Desarrollo de sistema de base de datos para Cultural Gym.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto">
-        <h2 class="section-title">Conectemos</h2>
-        <div class="social-links">
-            <a href="https://github.com/Jose-Alejandro-Sabino-Romero-Salas" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/jos%C3%A9-alejandro-romero-salas-56962b313/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/powwer__hub/" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-    </section>
-
+    
     <footer>
-        <p>&copy; 2024 José Alejandro Sabino Romero Salas</p>
+        <p>© 2024  Jose Alejandro Romero </p>
     </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> 
+    <script>
+        AOS.init
+        (
+            {
+            duration: 1200,
+            }
+        );
+    </script>
+
 </body>
+
 </html>
