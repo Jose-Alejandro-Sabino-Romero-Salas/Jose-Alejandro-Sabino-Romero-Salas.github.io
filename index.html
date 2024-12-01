@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -20,13 +19,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!--  -->
+
     <style>
-        /* General */
         body 
         {
             font-family: 'Zilla Slab', serif;
-           /* background-color: #211e21;*/
+
             background-color: #21201e;
             color: white;
             margin: 0;
@@ -64,14 +62,10 @@
         color: white;
         position: relative;
         background-attachment: scroll;
-        /*background-attachment: fixed;*/
         z-index: 0;
         overflow: hidden; 
     }
  
-     
-
-       
         
         .cabecera::after
          {
@@ -88,7 +82,6 @@
 
         .cabecera .titulo-pagina 
         {
-            /*font-size: 3rem;*/
             font-size: clamp(2rem, 6vw, 3rem);
             text-shadow: 3px 3px 5px rgba(56, 46, 46, 0.7);
             z-index: 2; 
@@ -96,7 +89,6 @@
         }
         .cabecera .subtitulo 
         {
-          /*  font-size: 1.2rem;*/
             font-size: clamp(1rem, 3vw, 1.5rem);
             color: white;
             margin-top: 20px;
@@ -115,33 +107,7 @@
             transform: scale(1.1);  
             
         }
-
-
-  /*     
-        .barra-navegacion 
-        {
-            position: sticky;
-            top: 0;
-            width: 100%; 
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 15px;
-            text-align: center;
-            z-index: 10;
-            font-family: 'Kode Mono', monospace;
-            
-        }
-
-        .barra-navegacion a 
-        {
-            color: white;
-            margin: 0 20px;
-            font-size: 1rem;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
-*/
-        
-        
+ 
         .barra-navegacion 
         {
             position: sticky;
@@ -187,8 +153,7 @@
         #sobre-mi 
         {
             width: 100%;
-            /* background-color: #211e21;*/
-            background-color: #1e211f;
+            background-color: #80ab8e;
             padding: 40px 0; 
             box-sizing: border-box;
         }
@@ -220,9 +185,9 @@
              background-color: transparent; 
         }
 
-        .caja-hobbie:hover, .caja-habilidad:hover, .caja-Cursos:hover, .caja-cantante:hover 
+        .caja-Cursos:hover, .caja-cantante:hover 
         {
-             background-color: #444444;     
+             background-color: #4f65af;     
         }
 
 .powerlifting-section {
@@ -241,7 +206,7 @@
 
         .lift-stat {
             padding: 20px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(30, 106, 153, 0.1);
             border-radius: 10px;
         }
 
@@ -251,127 +216,6 @@
             font-weight: bold;
         }
 
-        
-
-        #mis-hobbies 
-        {
-            /* background-color: #211e21;*/
-            background-color: #211e21;
-        }
-
-        #mis-hobbies h2 
-        {
-           font-size: clamp(2rem, 5vw, 2.5rem);
-            /*font-size: 2.5rem;*/
-            margin-bottom: 20px;
-            color: #00064d;
-        }
-
-        #mis-hobbies img
-        {
-            /*
-            width: 400px;
-            margin-top: 20px;
-        */
-             width: 100%;
-            max-width: 400px;
-            margin-top: 20px;
-        }
-
-        .contenedor-hobbies 
-        {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .caja-hobbie
-        {
-            background-color: #444;
-            color: white;
-            padding: 20px;
-              width: 100%;
-            max-width: 300px;
-            margin:10px;
-            box-sizing:border- box;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        .caja-hobbie:hover 
-        {
-           background-color: #004d3f;
-           /*background-color: #000000;*/
-        }
-
-        .caja-hobbie i 
-        {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-  
-        /* Habilidades */
-        #mis-habilidades 
-        {
-            /* background-color: #211e21;*/
-            background-color: #1e211f;
-        }
-
-        #mis-habilidades h2 
-        {
-            font-size: clamp(2rem, 5vw, 2.5rem);
-            /*font-size: 2.5rem;*/
-            margin-bottom: 20px;
-            color: #004d20;
-        }
-
-        .contenedor-habilidades 
-        {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .caja-habilidad 
-        {
-            background-color: #555;
-            color: white;
-            padding: 20px;
-            width: 30%;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        .caja-habilidad:hover 
-        {
-            background-color: #00064d;
-        }
-
-        .caja-habilidad i 
-        {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-      
-        #mis-habilidades 
-        {
-            /* background-color: #211e21;*/
-            background-color: #211e21;
-        }
-
-        #mis-habilidades h2 
-        {
-           font-size: clamp(2rem, 5vw, 2.5rem);
-            /*font-size: 2.5rem;*/
-            margin-bottom: 20px;
-            color: #00064d;
-        }
 
         .contenedor-Cursos 
         {
@@ -383,8 +227,8 @@
 
         .caja-Cursos
         {
-            background-color: #555;
-            color: rgb(255, 255, 255);
+            background-color: #5bc271;
+            color: rgb(78, 81, 160);
             padding: 20px;
             width: 30%;
             border-radius: 10px;
@@ -395,7 +239,7 @@
 
         .caja-Cursos:hover 
         {
-            background-color: rgb(0, 0, 0); 
+            background-color: rgb(55, 15, 15); 
         }
 
         .caja-Cursos i 
@@ -407,7 +251,7 @@
         .btn 
         {
             background-color: #1e0f2d;
-            color: rgb(255, 255, 255);
+            color: rgb(150, 101, 101);
             padding: 12px 25px;
             margin: 20px;
             text-decoration: none;
@@ -419,8 +263,8 @@
         .btn:hover
         {
             background-color: #00064d;
-            color: black;
-            background-color: rgb(255, 196, 102);  
+            color: rgb(142, 34, 34);
+            background-color: rgb(102, 255, 201);  
         }
 
         footer 
@@ -445,7 +289,7 @@
 
         .redes-sociales a:hover 
         {
-            color: #00064d;
+            color: #004d3e;
         }
                 
         .contenedor-cantantes 
@@ -460,7 +304,7 @@
        
         .caja-cantante 
         {
-            background-color: #555;
+            background-color: #555555;
             color: white;
             width: 22%;
             text-align: center;
@@ -470,34 +314,16 @@
             transition: background-color 0.3s ease;
             box-sizing: border-box;
         }
-/*
-        .caja-cantante img 
-        {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-*/
-        .caja-cantante img 
-        {
-            width: 100px;     
-            max-width: 200px;
-            height: auto;     
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
+
         
         .caja-cantante:hover 
         {
-            background-color: #00064d;
-            /*background-color: #000000;*/
+            background-color: #124d00;
         }
 
      
         .caja-cantante h3 
         {
-            
-            /*font-size: 1.5rem;*/
             margin-bottom: 10px;
         }
 
@@ -505,31 +331,26 @@
         .caja-cantante a 
         {
             display: inline-block;
-            background-color: #1c2d0f;
-            color: white;
+            background-color: #0f2d1e;
+            color: rgb(0, 0, 0);
             padding: 12px 25px;
             text-decoration: none;
             border-radius: 5px;
-            /*
-            border: 2px solid transparent;
-             transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;*/
            transition: background-color 0.3s ease;
         }
 
         .caja-cantante a:hover 
         {
             
-            background-color: #00064d; 
-            color: black;
-            background-color: rgb(57, 84, 255);  
+            background-color: #004d11; 
+            color: rgba(0, 0, 0, 0);
+            background-color: rgb(163, 59, 75);  
             /*color: #27133c;  
             border: 2px solid #f7a400; */ /* Borde amarillo */
         }
-         /* Compañeros */
         #Compañeros 
         {
-            /* background-color: #211e21;*/
-            background-color: #211e21;
+            background-color: #1e2021;
             padding: 50px 20px;
             text-align: center;
         }
@@ -557,7 +378,7 @@
         
         a:hover 
         {
-            color: #00064d;
+            color: #4d004c;
         }
         
         @media screen and (max-width: 768px) {
@@ -583,17 +404,12 @@
                 font-size: 1rem;
                 padding-left: 10px;
             }
-
-            .contenedor-hobbies,
-            .contenedor-habilidades,
             .contenedor-cantantes 
             {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .caja-hobbie,
-            .caja-habilidad,
             .caja-cantante 
             {
                 width: 45%;
@@ -613,7 +429,7 @@
     .cabecera .subtitulo {
         font-size: 1rem;
     }
-    .caja-hobbie, .caja-habilidad, .caja-cantante {
+   .caja-cantante {
         width: 90%;
     }
     #sobre-mi h2 {
@@ -681,13 +497,6 @@
                 font-size: 1rem;
                 max-width: 95%;
             }
-            /*
-            #sobre-mi img 
-            {
-                width: 150px;  
-            }
-            */
-          
             #sobre-mi .contenido {
                 padding-left: 2cm;
                 padding-right: 2cm;
@@ -738,7 +547,8 @@
               <h2>Sobre mí</h2>
               <p>Mi nombre es José Alejandro Romero Salas, tengo 18 años, actualmente me encuentro
                     en el segundo semestre de la carrera de Ciencia de la Computación
-                    en la Universidad Católica San Pablo.
+                    en la Universidad Católica San Pablo. 
+                    Fuera de la univerisdad me dedico al powerlifting.
               </p>
 
     
@@ -817,7 +627,6 @@
         
         
         <div class="caja-cantante">
-           <img src="#" >
            <h3></h3>
            <a href="https://open.spotify.com/artist/0f3EsoviYnRKTkmayI3cux?si=RgCDG4p1SqiKESryLpBlPg" target="_blank" class="spotify-link">
                <i class="fab fa-spotify"></i> Men At Work
@@ -825,7 +634,6 @@
        </div>
        
        <div class="caja-cantante">
-        <img src="#" >
         <h3></h3>
         <a href="https://open.spotify.com/artist/4bthk9UfsYUYdcFyqxmSUU?si=EgKWlTT8QoacD7SRPIDeNA" target="_blank" class="spotify-link">
             <i class="fab fa-spotify"></i> Tears for Fears
@@ -833,7 +641,6 @@
     </div>
         <!--1-->
         <div class="caja-cantante">
-            <img src="#">
             <h3></h3>
             
             <a href="https://open.spotify.com/artist/6i6WlGzQtXtz7GcC5H5st5?si=zzvIkGUtSAuBfaGD0HD1kw" target="_blank" class="spotify-link">
@@ -842,7 +649,6 @@
         </div>
         <!--2-->
         <div class="caja-cantante">
-            <img src="img/Chase atlantic.jpg">
             <h3></h3>
             <a href="https://open.spotify.com/artist/2m62cc253Xvd9qYQ8d2X3d?si=Rytx9NrWSqyl18s_twOINw" target="_blank" class="spotify-link">
                 <i class="fab fa-spotify"></i> The Alan Parsons Project
@@ -850,14 +656,12 @@
         </div>
         <!--3-->
         <div class="caja-cantante">
-            <img src="#" >
             <h3></h3>
             <a href="https://open.spotify.com/artist/5NGO30tJxFlKixkPSgXcFE?si=OSRoJGDeRmacJrWvkT96YA" target="_blank" class="spotify-link">
                 <i class="fab fa-spotify"></i> The Police
             </a>
         </div>
         <div class="caja-cantante">
-            <img src="#" >
             <h3></h3>
             <a href="https://open.spotify.com/artist/7MhMgCo0Bl0Kukl93PZbYS?si=xBKLM440QBKKae8TiZ34mg" target="_blank" class="spotify-link">
                 <i class="fab fa-spotify"></i> Blur
@@ -865,7 +669,6 @@
         </div>
         <!--4-->
         <div class="caja-cantante">
-            <img src="#">
             <h3></h3>
             <p> <p>
             <a href="https://open.spotify.com/artist/0k17h0D3J5VfsdmQ1iZtE9?si=fFY8WeiISNGH2mOHai22bA" target="_blank" class="spotify-link">
@@ -878,7 +681,6 @@
         </div>
         <!--5-->
         <div class="caja-cantante">
-            <img src="img/Centimillimental.jpg" >
             <h3></h3>
             <a href="https://open.spotify.com/artist/0rvjqX7ttXeg3mTy8Xscbt?si=04w_Vl3nQqKSvK7m71d2bQ" target="_blank" class="spotify-link">
                 <i class="fab fa-spotify"></i> Journey
@@ -886,7 +688,6 @@
         </div>
         <!--6-->
         <div class="caja-cantante">
-            <img src="img/Joe Hisaishi.jpg">
             <h3></h3>
             <a href="https://open.spotify.com/artist/6CrQKZeuSKNYgrE7PeYqJ1?si=Ru5arJvHQB-uWL8D-1zzgg" target="_blank" class="spotify-link">
                 <i class="fab fa-spotify"></i> Serú Girán
@@ -894,7 +695,6 @@
         </div>
         <!--7-->
         <div class="caja-cantante">
-            <img src="img/Pedro Suarez Vertiz.jpg" >
             <h3></h3>
             <a href="https://open.spotify.com/artist/7t0rwkOPGlDPEhaOcVtOt9?si=voJPc5cOSwO7FN4IdNmcow" target="_blank" class="spotify-link">
                 <i class="fab fa-spotify"></i> The Cranberries
@@ -904,7 +704,6 @@
         
          <!--11-->
          <div class="caja-cantante">
-            <img src="#">
             <h3></h3>
             <a href="https://open.spotify.com/artist/0xliTEbFfy5HQHvsTknTkX?si=l-VbQ3FMSO-QV3TQ9phZjA" target="_blank" class="spotify-link">
                 <i class="fab fa-spotify"></i> Alphaville
@@ -913,14 +712,12 @@
         
          <!--12-->
          <div class="caja-cantante">
-            <img src="#" alt="The Strokes">
             <h3></h3>
             <a href="https://open.spotify.com/artist/3JsMj0DEzyWc0VDlHuy9Bx?si=duBeo0JtTs-RWSvfjIJ_HQ" target="_blank" class="spotify-link">
                 <i class="fab fa-spotify"></i> Supertramp
             </a>
         </div>
         <div class="caja-cantante">
-            <img src="#">
             <h3></h3>
             <a href="https://open.spotify.com/artist/3yY2gUcIsjMr8hjo51PoJ8?si=D0hJDMAGTgqrONAyKXRu8g" target="_blank" class="spotify-link">
                 <i class="fab fa-spotify"></i> The Smiths
@@ -933,7 +730,7 @@
     
     <!--  Compañeros -->
     <section id="Compañeros" data-aos="fade-up">
-        <h2>Visita las páginas de mis compañeros</h2>
+        <h2>Conoce a mis compañeros</h2>
         <p>
             <a href="https://mv1323.github.io/miguelvilchezgustavson.github.io/" target="_blank" class="btn">Miguel Vilchez</a>
             <a href="https://alice-gabriela-sucasaca-i.github.io/" target="_blank" class="btn">Alice Sucasaca</a>
@@ -985,3 +782,4 @@
 </body>
 
 </html>
+
